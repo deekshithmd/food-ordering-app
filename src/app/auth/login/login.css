@@ -1,0 +1,38 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  height: auto;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input {
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: rgb(156, 181, 188);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: rgb(171, 231, 248);
+}

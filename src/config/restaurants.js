@@ -1,6 +1,14 @@
 import Restaurant1 from "../assets/restaurant1.jpg";
 import Restaurant2 from "../assets/restaurant2.jpg";
 import Restaurant3 from "../assets/restaurant3.jpg";
+import Biryani from "../assets/biryani.jpg";
+import Dessert1 from "../assets/cream1.jpg";
+import Dessert2 from "../assets/cream2.jpg";
+import FriedRice from "../assets/friedrice.jpg";
+import Idli from "../assets/idli.jpg";
+import Parota from "../assets/parota.jpg";
+import Poori from "../assets/poori.jpg";
+import Rice from "../assets/rice.jpg"
 
 export const restaurantData = [
   {
@@ -11,7 +19,7 @@ export const restaurantData = [
       {
         id: "11",
         name: "Item1",
-        image: "",
+        image: Idli,
         season: "Summer",
         dietry: "Egg_Free",
         type: "Breakfast",
@@ -19,7 +27,7 @@ export const restaurantData = [
       {
         id: "12",
         name: "Item2",
-        image: "",
+        image: Biryani,
         season: "Winter",
         dietry: "Gluten_Free",
         type: "Dinner",
@@ -27,7 +35,7 @@ export const restaurantData = [
       {
         id: "13",
         name: "Item3",
-        image: "",
+        image: Dessert1,
         season: "Spring",
         dietry: "Dairy_Free",
         type: "Dessert",
@@ -35,7 +43,7 @@ export const restaurantData = [
       {
         id: "14",
         name: "Item4",
-        image: "",
+        image: FriedRice,
         season: "Summer",
         dietry: "Dairy_Free",
         type: "Dinner",
@@ -43,7 +51,7 @@ export const restaurantData = [
       {
         id: "15",
         name: "Item5",
-        image: "",
+        image: Parota,
         season: "Winter",
         dietry: "Egg_Free",
         type: "Breakfast",
@@ -51,7 +59,7 @@ export const restaurantData = [
       {
         id: "16",
         name: "Item6",
-        image: "",
+        image: Rice,
         season: "Summer",
         dietry: "Dairy_Free",
         type: "Dinner",
@@ -66,7 +74,7 @@ export const restaurantData = [
       {
         id: "21",
         name: "Item1",
-        image: "",
+        image: Dessert2,
         season: "Summer",
         dietry: "Egg_Free",
         type: "Dessert",
@@ -74,7 +82,7 @@ export const restaurantData = [
       {
         id: "22",
         name: "Item2",
-        image: "",
+        image: Rice,
         season: "Winter",
         dietry: "Dairy_Free",
         type: "Dinner",
@@ -82,7 +90,7 @@ export const restaurantData = [
       {
         id: "23",
         name: "Item3",
-        image: "",
+        image: Parota,
         season: "Spring",
         dietry: "Gluten_Free",
         type: "Breakfast",
@@ -90,7 +98,7 @@ export const restaurantData = [
       {
         id: "24",
         name: "Item4",
-        image: "",
+        image: Idli,
         season: "Summer",
         dietry: "Dairy_Free",
         type: "Breakfast",
@@ -98,7 +106,7 @@ export const restaurantData = [
       {
         id: "25",
         name: "Item5",
-        image: "",
+        image: FriedRice,
         season: "Winter",
         dietry: "Gluten_Free",
         type: "Dinner",
@@ -106,7 +114,7 @@ export const restaurantData = [
       {
         id: "26",
         name: "Item6",
-        image: "",
+        image: Dessert1,
         season: "Summer",
         dietry: "Egg_Free",
         type: "Dessert",
@@ -121,7 +129,7 @@ export const restaurantData = [
       {
         id: "31",
         name: "Item1",
-        image: "",
+        image: Poori,
         season: "Summer",
         dietry: "Gluten_Free",
         type: "Breakfast",
@@ -129,7 +137,7 @@ export const restaurantData = [
       {
         id: "32",
         name: "Item2",
-        image: "",
+        image: Parota,
         season: "Winter",
         dietry: "Egg_Free",
         type: "Breakfast",
@@ -137,7 +145,7 @@ export const restaurantData = [
       {
         id: "33",
         name: "Item3",
-        image: "",
+        image: FriedRice,
         season: "Spring",
         dietry: "Dairy_Free",
         type: "Dinner",
@@ -145,7 +153,7 @@ export const restaurantData = [
       {
         id: "34",
         name: "Item4",
-        image: "",
+        image: Idli,
         season: "Summer",
         dietry: "Egg_Free",
         type: "Breakfast",
@@ -153,7 +161,7 @@ export const restaurantData = [
       {
         id: "35",
         name: "Item5",
-        image: "",
+        image: Dessert1,
         season: "Winter",
         dietry: "Egg_Free",
         type: "Dessert",
@@ -161,7 +169,7 @@ export const restaurantData = [
       {
         id: "36",
         name: "Item6",
-        image: "",
+        image: Dessert2,
         season: "Summer",
         dietry: "Gluten_Free",
         type: "Dessert",

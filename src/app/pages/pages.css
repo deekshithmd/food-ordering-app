@@ -1,0 +1,17 @@
+.layout-1 {
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 18% auto;
+  grid-template-areas: "area area1";
+}
+
+.filter {
+  grid-area: area;
+  border: 1px solid blue;
+}
+
+.page-content {
+  grid-area: area1;
+}

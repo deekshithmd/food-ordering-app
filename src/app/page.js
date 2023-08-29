@@ -1,25 +1,31 @@
 'use client'
-import Image from 'next/image'
 import styles from './page.module.css'
-import { restaurantData } from '@/config/restaurants'
-import { useData } from '@/contexts/DataContext'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import RequiresAuth from '@/components/RequireAuth'
+import { useData } from '@/contexts/DataContext'
 
 export default function Home() {
-  const { setItems } = useData()
+  const { setRestaurant, restaurants } = useData()
   const router = useRouter()
+
   return (
-    <main className={styles.main}>
-      {
-        restaurantData?.map(restaurant => {
-          return (
-            <div key={restaurant?.id} onClick={() => { setItems(restaurant); router.push('/pages/home') }}>
-              <h2>{restaurant?.restaurant}</h2>
-              <Image src={restaurant?.image} height={100} width={200} alt="restaurant" />
-            </div>
-          )
-        })
-      }
-    </main>
+    <RequiresAuth>
+      <main className={styles.main}>
+        <div className={styles.home_page}>
+          <button onClick={()=>router.push('/temp')}>Nav</button>
+          {
+            restaurants?.map(restaurant => {
+              return (
+                <div key={restaurant?.id} onClick={() => { setRestaurant(restaurant); router.push('/pages/productpage') }}>
+                  <h2>{restaurant?.restaurant}</h2>
+                  <Image src={restaurant?.image} height={100} width={200} alt="restaurant" />
+                </div>
+              )
+            })
+          }
+        </div>
+      </main>
+    </RequiresAuth>
   )
 }
