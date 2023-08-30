@@ -1,5 +1,5 @@
 'use client'
-import "./pages.css"
+import "./features.css"
 import { Filters } from "@/components/Filter"
 import RequiresAuth from "@/components/RequireAuth"
 

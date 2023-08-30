@@ -49,7 +49,7 @@ export const Filters = () => {
     return (
         <RequiresAuth>
             <div className="filter-container">
-                <h1>Filters</h1>
+                <h1>Food filters</h1>
                 <button onClick={() => setFilters([])}>Clear All Filters</button>
                 <div className="filter-section">
                     <h1>Season</h1>

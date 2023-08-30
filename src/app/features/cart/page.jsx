@@ -2,17 +2,17 @@
 import { ProductCard } from "@/components/ProductCard"
 import { useData } from "@/contexts/DataContext"
 import RequiresAuth from "@/components/RequireAuth"
-import "./favourites.css"
+import "./cart.css"
 
-const Favourites = () => {
-    const { favourites, restaurant } = useData()
+const Cart = () => {
+    const { cart, restaurant } = useData()
     return (
         <RequiresAuth>
             <div className="products">
-                <h1>{restaurant?.restaurant}</h1>
+                <h1>Cart Items</h1>
                 <div className="product-list">
                     {
-                        favourites?.map((item) => {
+                        cart?.map((item) => {
                             return (
                                 <ProductCard key={item.id} product={item} />
                             )
@@ -24,4 +24,4 @@ const Favourites = () => {
     )
 }
 
-export default Favourites
+export default Cart

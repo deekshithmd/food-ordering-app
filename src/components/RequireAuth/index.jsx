@@ -7,11 +7,9 @@ import { useAuth } from "@/contexts/AuthContext";
 const RequiresAuth = ({ children }) => {
     const { isLoggedIn, setIsLoggedIn } = useAuth();
     const router = useRouter();
-
     useEffect(() => {
         if (isLoggedIn) {
             setIsLoggedIn(true);
-            router.push("/");
         } else {
             router.push("/auth/login");
         }

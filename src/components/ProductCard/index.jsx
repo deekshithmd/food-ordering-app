@@ -1,25 +1,38 @@
 import Image from "next/image"
 import "./product.css"
 import { useData } from "@/contexts/DataContext"
+import { useAuth } from "@/contexts/AuthContext"
+import { useRouter } from "next/navigation"
 
 export const ProductCard = ({ product }) => {
     const { cart, setCart, favourites, setFavourites } = useData()
+    const { isLoggedIn } = useAuth();
+    const router = useRouter();
 
     const handleAddCart = (item) => {
-        if (!cart.some(i => i.id === item.id)) {
-            setCart(prev => [...prev, item])
+        if (isLoggedIn) {
+            if (!cart.some(i => i.id === item.id)) {
+                setCart(prev => [...prev, item])
+            }
+            else {
+                setCart(cart.filter(i => i.id !== item.id))
+            }
         }
         else {
-            setCart(cart.filter(i => i.id !== item.id))
+            router.push('/auth/login')
         }
     }
 
     const handleAddFavourites = (item) => {
-        if (!favourites.some(i => i.id === item.id)) {
-            setFavourites(prev => [...prev, item])
-        }
-        else {
-            setFavourites(favourites.filter(i => i.id !== item.id))
+        if (isLoggedIn) {
+            if (!favourites.some(i => i.id === item.id)) {
+                setFavourites(prev => [...prev, item])
+            }
+            else {
+                setFavourites(favourites.filter(i => i.id !== item.id))
+            }
+        } else {
+            router.push('/auth/login')
         }
     }
     return (
