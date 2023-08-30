@@ -16,10 +16,14 @@ nav {
   cursor: pointer;
 }
 
-.action-container{
-    width:150px;
-    display: flex;
-    justify-content: space-between;
+.action-container {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-btn {
+  background: rgb(195, 235, 247);
 }
 
 .cart-btn {

@@ -10,15 +10,17 @@ const Cart = () => {
         <RequiresAuth>
             <div className="products">
                 <h1>Cart Items</h1>
-                <div className="product-list">
-                    {
-                        cart?.map((item) => {
-                            return (
-                                <ProductCard key={item.id} product={item} />
-                            )
-                        })
-                    }
-                </div>
+                {
+                    cart?.length > 0 ? <div className="product-list">
+                        {
+                            cart?.map((item) => {
+                                return (
+                                    <ProductCard key={item.id} product={item} />
+                                )
+                            })
+                        }
+                    </div> : <h1>No items added</h1>
+                }
             </div>
         </RequiresAuth>
     )

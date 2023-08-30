@@ -21,7 +21,9 @@ export const Header = () => {
     return (
         <nav>
             <h1 onClick={() => router.push('/')} className="logo">Food</h1>
+
             <div className="action-container">
+                <button className="restaurant-btn" onClick={() => router.push('/')}>Restaurants</button>
                 <span className="cart-btn" onClick={() => router?.push('/features/cart')}>
                     <Image src={Cart} height={20} width={20} alt="cart" />
                     <span className="badge">{cart?.length}</span>
